@@ -8,5 +8,11 @@
 <body>
     <p>Welcome to villa booking</p>
     <p>Villa booking will help u with automated acceptance of booking requests from customers.</p>
+
+    {% for villa in villas %}
+    <p>
+        <a href="{% url 'villa_booking_app:villa_info' villa.id %}">Book {{ villa.name }}</a>
+    </p>
+    {% endfor %}
 </body>
 </html>
