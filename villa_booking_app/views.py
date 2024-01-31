@@ -9,7 +9,7 @@ def index(request):
     # The home page for villa_booking_app
     villas = Villa.objects.all()
     context = {'villas': villas}
-    return render(request, 'villa_booking_app/index.html', context)
+    return render(request, 'villa_booking_app/home.html', context)
 
 #display villa info
 def villa_detail(request, villa_id):

@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}" />
+    <script src="{% static 'scripts/home.js' %}"></script>
+</head>
+
+<body>
+    <!-- pop up menu list -->
+    <div id="dimmer">
+        <div id="menu" class="overlay">
+            <a href="javascript:void(0)" id="close_button">&#x2715;</a>
+            <div class="overlay-content">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <button class="transparent_button horizontal_rounded_edges">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo_container">
+            <div class="logo">
+                <img src="{% static 'image/villa_image_1.avif' %}" alt="logo_pic">
+            </div>
+            <h2>LOGO</h2>
+        </div>
+        <div id="menu_button">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <div class="container tint">
+        <div class="context">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button class="transparent_button horizontal_rounded_edges">Book Now</button>
+            <br>
+            <button class="transparent_button vertical_rounded_edges">↓</button>
+        </div>
+    </div>
+
+    <div class="about_us">
+        <div class="background_text">About Us</div>
+        <h2>About Us</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa pariatur optio totam omnis minima,
+            repellendus id fuga fugit temporibus tenetur, expedita nihil eveniet est ipsum dignissimos officiis
+            accusantium ratione. Maiores.</p>
+        <button class="solid_button horizontal_rounded_edges">Read More</button>
+        <div class="gallery">
+            <img src="{% static 'image/villa_image_1.avif' %}" alt="villa image">
+            <img src="{% static 'image/villa_image_1.avif' %}" alt="villa image">
+            <img src="{% static 'image/villa_image_1.avif' %}" alt="villa image">
+            <img src="{% static 'image/villa_image_1.avif' %}" alt="villa image">
+        </div>
+    </div>
+
+    <div class="rooms">
+        <div class="room_tabs">
+            <button class="tab_button selected" data-room-type="bronze">Bronze Rooms</button>
+            <button class="tab_button" data-room-type="silver">Silver Rooms</button>
+            <button class="tab_button" data-room-type="gold">Gold Rooms</button>
+        </div>
+        <div class="room_info_container">
+            <div id="bronze" class="room_info">
+                <img src="{% static 'image/villa_image_1.avif' %}" alt="villa image">
+                <h2>Bronze Rooms</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae doloremque culpa ducimus.
+                    Harum amet eaque, culpa fugiat beatae dolores delectus minima laborum inventore repellendus, cumque
+                    temporibus illum quae quas.</p>
+                <div class="room_details">
+                    <p class="dimension">20m2</p>
+                    <p class="people">2 person</p>
+                    <p class="price">100EUR</p>
+                </div>
+                <button class="solid_button horizontal_rounded_edges">Book Now</button>
+            </div>
+            <div id="silver" class="room_info">
+                <img src="{% static 'image/villa_image_1.avif' %}" alt="villa image">
+                <h2>Silver Rooms</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae doloremque culpa ducimus.
+                    Harum amet eaque, culpa fugiat beatae dolores delectus minima laborum inventore repellendus, cumque
+                    temporibus illum quae quas.</p>
+                <div class="room_details">
+                    <p class="dimension">30m2</p>
+                    <p class="people">3 person</p>
+                    <p class="price">150EUR</p>
+                </div>
+                <button class="solid_button horizontal_rounded_edges">Book Now</button>
+            </div>
+            <div id="gold" class="room_info">
+                <img src="{% static 'image/villa_image_1.avif' %}" alt="villa image">
+                <h2>Gold Rooms</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae doloremque culpa ducimus.
+                    Harum amet eaque, culpa fugiat beatae dolores delectus minima laborum inventore repellendus, cumque
+                    temporibus illum quae quas.</p>
+                <div class="room_details">
+                    <p class="dimension">40m2</p>
+                    <p class="people">4 person</p>
+                    <p class="price">200EUR</p>
+                </div>
+                <button class="solid_button horizontal_rounded_edges">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="others">
+        <div class="container tint">
+            <div class="context">
+                <h2>Homemade Food</h2>
+            </div>
+        </div>
+        <div class="container tint">
+            <div class="context">
+                <h2>Excellent Spa</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <button class="transparent_button horizontal_rounded_edges">Read More</button>
+            </div>
+        </div>
+        <div class="container tint">
+            <div class="context">
+                <h2>Explore Split</h2>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo_container">
+            <div class="logo">
+                <img src="{% static 'image/villa_image_1.avif' %}" alt="logo_pic">
+            </div>
+            <h2>LOGO</h2>
+        </div>
+        <div class="contact_info">
+            <h3>Contact Info</h3>
+            <p>some address</p>
+            <p>+601234567890</p>
+            <p>someemail@gmail.com</p>
+        </div>
+        <div class="links">
+            <h3>Links</h3>
+            <p><a href="">Home</a></p>
+            <p><a href="">About Us</a></p>
+            <p><a href="">Contact Us</a></p>
+        </div>
+        <div class="socials">
+            <h3>Socials</h3>
+            <a href="https://x.com/"><img src="{% static 'image/x.png' %}" alt="X"></a>
+            <a href="https://instagram.com/"><img src="{% static 'image/ig.png' %}" alt="Instagram"></a>
+            <a href="https://facebook.com/"><img src="{% static 'image/fb.png' %}" alt="Facebook"></a>
+        </div>
+        <div class="credit">
+            <p>© logo All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
