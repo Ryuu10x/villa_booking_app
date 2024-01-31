@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}" />
 </head>
 
 <body>
@@ -54,7 +54,7 @@
         <div class="main_container">
             <div class="logo_container">
                 <div class="logo">
-                    <img src="./asstes/villa_image_1.avif" alt="logo_pic">
+                    <img src="{% static 'image/villa_image_1.avif' %}" alt="logo_pic">
                 </div>
                 <h2>LOGO</h2>
             </div>
@@ -104,10 +104,10 @@
                     accusantium ratione. Maiores.</p>
                 <button class="solid_button horizontal_rounded_edges">Read More</button>
             </div>
-            <img src="./asstes/villa-pic-1.jpg" alt="villa image" class="villa-image-1">
-            <img src="./asstes/villa-pic-4.jpg" alt="villa image" class="villa-image-2">
-            <img src="./asstes/villa-pic-3.jpg" alt="villa image" class="villa-image-3">
-            <img src="./asstes/villa-pic-2.jpg" alt="villa image" class="villa-image-4">
+            <img src="{% static 'image/villa-pic-1.jpg' %}" alt="villa image" class="villa-image-1">
+            <img src="{% static 'image/villa-pic-4.jpg' %}" alt="villa image" class="villa-image-2">
+            <img src="{% static 'image/villa-pic-3.jpg' %}" alt="villa image" class="villa-image-3">
+            <img src="{% static 'image/villa-pic-2.jpg' %}" alt="villa image" class="villa-image-4">
         </div>
     </div>
 
@@ -120,7 +120,7 @@
             </div>
             <div class="room_info_container">
                 <div id="bronze" class="room_info">
-                    <img src="./asstes/villa_image_1.avif" alt="villa image" class="room_info_pic">
+                    <img src="{% static 'image/villa_image_1.avif' %}" alt="villa image" class="room_info_pic">
                     <div class="room_info_details">
                         <h2>Bronze Rooms</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae doloremque culpa
@@ -141,7 +141,7 @@
 
                 </div>
                 <div id="silver" class="room_info">
-                    <img src="./asstes/villa_image_1.avif" alt="villa image" class="room_info_pic">
+                    <img src="{% static 'image/villa_image_1.avif' %}" alt="villa image" class="room_info_pic">
                     <div class="room_info_details">
                         <h2>Silver Rooms</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae doloremque culpa
@@ -162,7 +162,7 @@
 
                 </div>
                 <div id="gold" class="room_info">
-                    <img src="./asstes/villa_image_1.avif" alt="villa image" class="room_info_pic">
+                    <img src="{% static 'image/villa_image_1.avif' %}" alt="villa image" class="room_info_pic">
                     <div class="room_info_details">
                         <h2>Gold Rooms</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae doloremque culpa
@@ -221,7 +221,7 @@
         <div class="main_container">
             <div class="logo_container">
                 <div class="logo">
-                    <img src="./asstes/villa_image_1.avif" alt="logo_pic">
+                    <img src="{% static 'image/villa_image_1.avif' %}" alt="logo_pic">
                 </div>
                 <h2>LOGO</h2>
             </div>
@@ -274,7 +274,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="home.js"></script>
+    <script src="{% static 'scripts/home.js' %}"></script>
 </body>
 
 </html>

@@ -9,7 +9,16 @@
     <h3>The dates you selected seemed already occupied please select a different date.</h3>
 
     <p>
-        <a href="{% url 'villa_booking_app:book_villa' villa.id %}">Book for a different date</a>
+        <!-- <a href="{% url 'villa_booking_app:book_villa' villa.id %}">Book for a different date</a> -->
+        <a href="{% url 'villa_booking_app:index' %}">Book for a different date</a>
     </p>
+
+    <h3>See below for occupied dates for your reference</h3>
+    <p>Villa is occupied for the following Dates:</p>
+        <ul>
+            {% for check_in_date, check_out_date in booked_dates %}
+            <li>{{ check_in_date }} - {{ check_out_date }}</li>
+            {% endfor %}
+        </ul>
 </body>
 </html>

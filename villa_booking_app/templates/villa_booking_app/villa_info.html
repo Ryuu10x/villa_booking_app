@@ -9,6 +9,7 @@
     <h2>{{ villa.name }}</h2>
     <p>{{ villa.description }}</p>
 
+        <p>Booking successful!</p>
         <h3>Villa is occupied for the following Dates:</h3>
         <ul>
             {% for check_in_date, check_out_date in booked_dates %}
@@ -16,7 +17,7 @@
             {% endfor %}
         </ul>
     <p>
-        <a href="{%url 'villa_booking_app:book_villa' villa.id %}">Book now</a>
+        <a href="{%url 'villa_booking_app:index'%}">Return to home</a>
     </p>
 </body>
 </html>
