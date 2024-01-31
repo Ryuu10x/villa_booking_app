@@ -7,6 +7,7 @@
 } */
 
 /* universal */
+
 * {
     padding: 0;
     margin: 0;
@@ -241,7 +242,7 @@ header .main_container {
 }
 
 .container {
-    background-image: url('./asstes/villa_image_1.avif');
+    background-image: url('{% static "image/villa_image_1.avif" %}');
     background-position: center;
     background-size: cover;
     position: relative;
