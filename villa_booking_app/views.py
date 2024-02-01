@@ -6,6 +6,13 @@ from datetime import timedelta
 
 # Create your views here.
 
+# views.py
+from django.contrib.auth.views import LoginView
+
+class CustomLoginView(LoginView):
+    template_name = 'login.html'  # Your login template
+    redirect_authenticated_user = True
+
 def index(request):
     # The home page for villa_booking_app
     villas = Villa.objects.all()

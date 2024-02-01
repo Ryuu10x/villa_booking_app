@@ -2,6 +2,7 @@
 
 from django.urls import path
 from . import views
+from .views import CustomLoginView
 
 app_name = 'villa_booking_app'
 urlpatterns = [
@@ -9,5 +10,6 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('villa/<int:villa_id>/', views.villa_detail, name='villa_info'),
     path('villa/<int:villa_id>/book/', views.book_villa, name='book_villa'),
+
 ]
 

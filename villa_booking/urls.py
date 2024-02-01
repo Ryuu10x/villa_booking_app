@@ -18,10 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from users.views import redirect_to_login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',  include('villa_booking_app.urls')),
+    path('villabooking/',  include('villa_booking_app.urls')),
+    path('users/', include('users.urls')),
+    path('', redirect_to_login),
 ]
 
 if settings.DEBUG:

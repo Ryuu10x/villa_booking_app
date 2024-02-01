@@ -28,7 +28,7 @@ environ.Env.read_env()
 SECRET_KEY = "django-insecure-a2eh0%#c+qk*9u3wsfa6i-wq4mjau#^xzo@nfj&v)@4*)95bfe"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     # my apps
     "villa_booking_app",
+    "users",
     # django default apps
     "django.contrib.admin",
     "django.contrib.auth",
@@ -112,6 +113,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# settings.py
+LOGIN_URL = 'login'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
