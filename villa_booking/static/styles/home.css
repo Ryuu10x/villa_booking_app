@@ -193,6 +193,7 @@ header .main_container {
 
 #villa_type {
     text-align: center;
+    text-align-last: center;
     padding: 10px 0;
 }
 
