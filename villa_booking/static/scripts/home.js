@@ -52,6 +52,9 @@ function ClosePopUp() {
   });
 }
 
+document.getElementById("start").value = new Date().toISOString().split('T')[0];
+document.getElementById("end").value = new Date().toISOString().split('T')[0];
+
 document.addEventListener("DOMContentLoaded", function () {
   RoomTabs();
   OpenPopUp();
