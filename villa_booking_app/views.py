@@ -19,6 +19,9 @@ def index(request):
     context = {'villas': villas}
     return render(request, 'villa_booking_app/home.html', context)
 
+def about(request):
+    return render(request, "villa_booking_app/about.html")
+
 #display villa info
 def villa_detail(request, villa_id):
     villa = get_object_or_404(Villa, pk = villa_id)

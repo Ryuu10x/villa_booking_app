@@ -1,17 +1,30 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>About Us</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'styles/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/about.css' %}" />
 </head>
-
 <body>
+
     <!-- pop up menu list -->
+    <!-- <div id="dimmer">
+        <div id="menu" class="overlay">
+            <a href="javascript:void(0)" id="close_button">&#x2715;</a>
+            <div class="overlay-content">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <button class="transparent_button horizontal_rounded_edges">Book Now</button>
+            </div>
+        </div>
+    </div> -->
+
+        <!-- pop up menu list -->
     <div id="menu_modal" class="dimmer">
         <div class="overlay menu main_container">
             <a href="javascript:void(0)" class="close_button">&#x2715;</a>
@@ -68,7 +81,7 @@
                 <a href="#">Home</a>
                 <a href="{% url 'villa_booking_app:about' %}">About Us</a>
                 <a href="#">Contact Us</a>
-                <button class="booking_button transparent_button horizontal_rounded_edges">Book Now</button>
+                <button class="transparent_button horizontal_rounded_edges">Book Now</button>
             </div>
             <div id="menu_button">
                 <div></div>
@@ -78,42 +91,54 @@
         </div>
     </header>
 
-    <div class="container tint hero">
+    <div class="container tint hero about-hero-container">
         <div class="main_container">
             <div class="context">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <button class="booking_button transparent_button horizontal_rounded_edges">Book Now</button>
-                <br>
-                <button class="transparent_button vertical_rounded_edges animate-arrow-container">
-                    <span class="animate-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                            <g fill="none">
-                                <path
-                                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                                <path fill="currentColor"
-                                    d="M13.06 3.283a1.5 1.5 0 0 0-2.12 0L5.281 8.939a1.5 1.5 0 0 0 2.122 2.122L10.5 7.965V19.5a1.5 1.5 0 0 0 3 0V7.965l3.096 3.096a1.5 1.5 0 1 0 2.122-2.122z" />
-                            </g>
-                        </svg>
-                    </span>
-                </button>
+                <p>About Us</p>
             </div>
         </div>
+        
     </div>
 
-    <div class="about_us main_container">
-        <div class="background_text">About Us</div>
-        <div class="gallery">
-            <div class="about_us_section">
-                <h2>About Us</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa pariatur optio totam omnis minima,
-                    repellendus id fuga fugit temporibus tenetur, expedita nihil eveniet est ipsum dignissimos officiis
-                    accusantium ratione. Maiores.</p>
-                <button class="solid_button horizontal_rounded_edges"><a href="{% url 'villa_booking_app:index' %}">Read More</a></button>
+    <div class="main_container about-us-container">
+        <div class="about-us-row">
+            <img src="{% static 'image/villa-pic-1.jpg' %}" alt="villa picture" />
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="about-us-row about-us-row1">
+            <h2 class="hide-on-desktop">Home Made Food</h2>
+            <div class="about-us-row-imgs">
+                <img class="about-us-row-img1 about-us-row-img" src="{% static 'image/food1.jpg' %}"/>
+                <img class="about-us-row-img2 about-us-row-img" src="{% static 'image/food2.jpg' %}"/>
             </div>
-            <img src="{% static 'image/villa-pic-1.jpg' %}" alt="villa image" class="villa-image-1">
-            <img src="{% static 'image/villa-pic-4.jpg' %}" alt="villa image" class="villa-image-2">
-            <img src="{% static 'image/villa-pic-3.jpg' %}" alt="villa image" class="villa-image-3">
-            <img src="{% static 'image/villa-pic-2.jpg' %}" alt="villa image" class="villa-image-4">
+            <div class="about-us-text">
+                <h2 class="appear-on-mobile">Home Made Food</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.</p>
+            </div>
+        </div>
+
+        <div class="about-us-row about-us-row2">
+            <h2 class="hide-on-desktop">Excellent Spa</h2>
+            <div class="about-us-row-imgs">
+                <img class="about-us-row-img1 about-us-row-img" src="{% static 'image/spa1.jpg' %}"/>
+                <img class="about-us-row-img2 about-us-row-img" src="{% static 'image/spa2.jpg' %}"/>
+            </div>
+            <div class="about-us-text">
+                <h2 class="appear-on-mobile">Excellent Spa</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.</p>
+            </div>
+        </div>
+        <div class="about-us-row about-us-row3">
+            <h2 class="hide-on-desktop">Explore Split</h2>
+            <div class="about-us-row-imgs">
+                <img class="about-us-row-img1 about-us-row-img" src="{% static 'image/split1.jpg' %}"/>
+                <img class="about-us-row-img2 about-us-row-img" src="{% static 'image/split2.jpg' %}"/>
+            </div>
+            <div class="about-us-text">
+                <h2 class="appear-on-mobile">Explore Split</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.</p>
+            </div>
         </div>
     </div>
 
@@ -140,11 +165,11 @@
                                 <p class="people">2 person</p>
                                 <p class="price">100EUR</p>
                             </div>
-                            <button class="booking_button solid_button horizontal_rounded_edges">Book Now</button>
+                            <button class="solid_button horizontal_rounded_edges">Book Now</button>
                         </div>
-
+                        
                     </div>
-
+                    
                 </div>
                 <div id="silver" class="room_info">
                     <img src="{% static 'image/villa_image_1.avif' %}" alt="villa image" class="room_info_pic">
@@ -161,11 +186,11 @@
                                 <p class="people">3 person</p>
                                 <p class="price">150EUR</p>
                             </div>
-                            <button class="booking_button solid_button horizontal_rounded_edges">Book Now</button>
+                            <button class="solid_button horizontal_rounded_edges">Book Now</button>
                         </div>
-
+                        
                     </div>
-
+                    
                 </div>
                 <div id="gold" class="room_info">
                     <img src="{% static 'image/villa_image_1.avif' %}" alt="villa image" class="room_info_pic">
@@ -182,42 +207,11 @@
                                 <p class="people">4 person</p>
                                 <p class="price">200EUR</p>
                             </div>
-                            <button class="booking_button solid_button horizontal_rounded_edges">Book Now</button>
+                            <button class="solid_button horizontal_rounded_edges">Book Now</button>
                         </div>
-
+                        
                     </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="others main_container">
-        <div class="container tint others-content">
-            <div class="context">
-                <h2>Homemade Food</h2>
-                <div class="context-details">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <button class="transparent_button horizontal_rounded_edges">Read More</button>
-                </div>
-
-            </div>
-        </div>
-        <div class="container tint others-content">
-            <div class="context">
-                <h2>Excellent Spa</h2>
-                <div class="context-details">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <button class="transparent_button horizontal_rounded_edges">Read More</button>
-                </div>
-            </div>
-        </div>
-        <div class="container tint others-content">
-            <div class="context">
-                <h2>Explore Split</h2>
-                <div class="context-details">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <button class="transparent_button horizontal_rounded_edges">Read More</button>
+                    
                 </div>
             </div>
         </div>
@@ -234,31 +228,22 @@
             <div class="contact_info">
                 <h3>Contact Info</h3>
                 <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
                     <span>some address</span>
                 </p>
                 <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z"/></svg>
                     <span>+601234567890</span>
                 </p>
                 <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
                     <span>someemail@gmail.com</span>
                 </p>
             </div>
             <div class="links">
                 <h3>Links</h3>
                 <p><a href="">Home</a></p>
-                <p><a href="{% url 'villa_booking_app:index' %}">About Us</a></p>
+                <p><a href="">About Us</a></p>
                 <p><a href="">Contact Us</a></p>
             </div>
             <div class="socials">
@@ -267,20 +252,16 @@
                 <a href="https://instagram.com/"><img src="{% static 'image/ig.png' %}" alt="Instagram"></a>
                 <a href="https://facebook.com/"><img src="{% static 'image/fb.png' %}" alt="Facebook"></a>
             </div>
-
+           
         </div>
         <div class="credit">
             <p>© logo All Rights Reserved</p>
         </div>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{% static 'scripts/home.js' %}"></script>
 </body>
-
 </html>

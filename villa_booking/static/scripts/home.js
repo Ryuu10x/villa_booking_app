@@ -64,120 +64,165 @@ document.addEventListener("DOMContentLoaded", function () {
 gsap.registerPlugin(ScrollTrigger);
 
 jQuery(document).ready(function ($) {
-  const isDesktop = window.innerWidth >= 1024;
+    const isDesktop = window.innerWidth >= 1024;
 
-  // gsap.to(".villa-image-1", {
-  //     scrollTrigger: {
-  //       trigger: ".gallery",
-  //       start: "top center",
-  //       end: "bottom top",
-  //       scrub: 2,
+    // gsap.to(".villa-image-1", {
+    //     scrollTrigger: {
+    //       trigger: ".gallery",
+    //       start: "top center",
+    //       end: "bottom top",
+    //       scrub: 2,
+  
+    //     //   onEnter: () => {
+    //     //     gsap.to(".villa-image-1", { opacity: 1 });
+    //     //   },
+    //     },
+    //     y: isDesktop ? -50 : -50,
+    //   });
 
-  //     //   onEnter: () => {
-  //     //     gsap.to(".villa-image-1", { opacity: 1 });
-  //     //   },
-  //     },
-  //     y: isDesktop ? -50 : -50,
-  //   });
+    gsap.to(".villa-image-1", {
+        scrollTrigger: {
+          trigger: ".about_us",
+          start: "top center",
+          end: "bottom top",
+          scrub: 2,
+  
+          onEnter: () => {
+            gsap.to(".villa-image-1", { opacity: 1 });
+          },
+        },
+        y: isDesktop ? -10 : -10,
+      });
 
-  gsap.to(".villa-image-1", {
-    scrollTrigger: {
-      trigger: ".about_us",
-      start: "top center",
-      end: "bottom top",
-      scrub: 2,
+      gsap.to(".villa-image-2", {
+        scrollTrigger: {
+          trigger: ".about_us",
+          start: "top center",
+          end: "bottom top",
+          scrub: 2,
+  
+          onEnter: () => {
+            gsap.to(".villa-image-2", { opacity: 1 });
+          },
+        },
+        y: isDesktop ? -50 : -50,
+      });
 
-      onEnter: () => {
-        gsap.to(".villa-image-1", { opacity: 1 });
-      },
-    },
-    y: isDesktop ? -10 : -10,
-  });
+      gsap.to(".villa-image-3", {
+        scrollTrigger: {
+          trigger: ".about_us",
+          start: "top center",
+          end: "bottom top",
+          scrub: 2,
+  
+          onEnter: () => {
+            gsap.to(".villa-image-3", { opacity: 1 });
+          },
+        },
+        y: isDesktop ? -20 : -20,
+      });
 
-  gsap.to(".villa-image-2", {
-    scrollTrigger: {
-      trigger: ".about_us",
-      start: "top center",
-      end: "bottom top",
-      scrub: 2,
+      gsap.to(".villa-image-4", {
+        scrollTrigger: {
+          trigger: ".about_us",
+          start: "top center",
+          end: "bottom top",
+          scrub: 2,
+  
+          onEnter: () => {
+            gsap.to(".villa-image-4", { opacity: 1 });
+          },
+        },
+        y: isDesktop ? -30 : -30,
+      });
+      gsap.to(".background_text", {
+        scrollTrigger: {
+          trigger: ".about_us",
+          start: "top center",
+          end: "bottom top",
+          scrub: 2,
+  
+          onEnter: () => {
+            gsap.to(".background_text", { opacity: 0.4 });
+          },
+        },
+        y: isDesktop ? -50 : -50,
+      });
 
-      onEnter: () => {
-        gsap.to(".villa-image-2", { opacity: 1 });
-      },
-    },
-    y: isDesktop ? -50 : -50,
-  });
+      gsap.to(".room_info", {
+        scrollTrigger: {
+          trigger: ".rooms",
+          start: "top bottom",
+          end: "top top",
+          scrub: 2,
+  
+        //   onEnter: () => {
+        //     gsap.to(".others", { opacity: 1 });
+        //   },
+        },
+        y: isDesktop ? 0 : 0,
+        opacity : 1,
+      });
 
-  gsap.to(".villa-image-3", {
-    scrollTrigger: {
-      trigger: ".about_us",
-      start: "top center",
-      end: "bottom top",
-      scrub: 2,
+      gsap.to(".others", {
+        scrollTrigger: {
+          trigger: ".others",
+          start: "top bottom",
+          end: "top center",
+          scrub: 2,
+  
+        //   onEnter: () => {
+        //     gsap.to(".others", { opacity: 1 });
+        //   },
+        },
+        y: isDesktop ? 0 : 0,
+        opacity : 1,
+      });
 
-      onEnter: () => {
-        gsap.to(".villa-image-3", { opacity: 1 });
-      },
-    },
-    y: isDesktop ? -20 : -20,
-  });
+      gsap.to(".about-us-row1", {
+        scrollTrigger: {
+          trigger: ".about-us-row1",
+          start: "top center",
+          end: "center bottom",
+          scrub: 2,
+  
+        //   onEnter: () => {
+        //     gsap.to(".others", { opacity: 1 });
+        //   },
+        },
+        y: isDesktop ? 0 : 0,
+        opacity : 1,
+      });
 
-  gsap.to(".villa-image-4", {
-    scrollTrigger: {
-      trigger: ".about_us",
-      start: "top center",
-      end: "bottom top",
-      scrub: 2,
+      gsap.to(".about-us-row2", {
+        scrollTrigger: {
+          trigger: ".about-us-row2",
+          start: "top center",
+          end: "center bottom",
+          scrub: 2,
+  
+        //   onEnter: () => {
+        //     gsap.to(".others", { opacity: 1 });
+        //   },
+        },
+        y: isDesktop ? 0 : 0,
+        opacity : 1,
+      });
 
-      onEnter: () => {
-        gsap.to(".villa-image-4", { opacity: 1 });
-      },
-    },
-    y: isDesktop ? -30 : -30,
-  });
-  gsap.to(".background_text", {
-    scrollTrigger: {
-      trigger: ".about_us",
-      start: "top center",
-      end: "bottom top",
-      scrub: 2,
+      gsap.to(".about-us-row3", {
+        scrollTrigger: {
+          trigger: ".about-us-row3",
+          start: "top center",
+          end: "center bottom",
+          scrub: 2,
+  
+        //   onEnter: () => {
+        //     gsap.to(".others", { opacity: 1 });
+        //   },
+        },
+        y: isDesktop ? 0 : 0,
+        opacity : 1,
+      });
 
-      onEnter: () => {
-        gsap.to(".background_text", { opacity: 0.4 });
-      },
-    },
-    y: isDesktop ? -50 : -50,
-  });
-
-  gsap.to(".room_info", {
-    scrollTrigger: {
-      trigger: ".rooms",
-      start: "top bottom",
-      end: "top top",
-      scrub: 2,
-
-      //   onEnter: () => {
-      //     gsap.to(".others", { opacity: 1 });
-      //   },
-    },
-    y: isDesktop ? 0 : 0,
-    opacity: 1,
-  });
-
-  gsap.to(".others", {
-    scrollTrigger: {
-      trigger: ".others",
-      start: "top bottom",
-      end: "top center",
-      scrub: 2,
-
-      //   onEnter: () => {
-      //     gsap.to(".others", { opacity: 1 });
-      //   },
-    },
-    y: isDesktop ? 0 : 0,
-    opacity: 1,
-  });
-
-
+    
 })
