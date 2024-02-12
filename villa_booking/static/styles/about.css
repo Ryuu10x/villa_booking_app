@@ -1,12 +1,13 @@
-.about-hero-container{
+.about-hero-container,
+.hero .main_container {
     height: 200px !important;
 }
 
-.about-us-container{
+.about-us-container {
     margin-top: 40px !important;
 }
 
-.about-us-row > img{
+.about-us-row>img {
     width: 100%;
     height: auto;
     border-radius: 5px;
@@ -15,13 +16,13 @@
     display: block;
 }
 
-.about-us-row p{
+.about-us-row p {
     margin-top: 20px;
     color: #727272;
     font-weight: 500;
 }
 
-.about-us-row-imgs{
+.about-us-row-imgs {
     width: 100%;
     position: relative;
     height: 300px;
@@ -29,7 +30,7 @@
     margin: auto;
 }
 
-.about-us-row-img1{
+.about-us-row-img1 {
     /* height: 175px; */
     width: 60%;
     height: auto;
@@ -39,7 +40,7 @@
     bottom: 0;
 }
 
-.about-us-row-img2{
+.about-us-row-img2 {
     width: 60%;
     height: auto;
     border-radius: 5px;
@@ -48,78 +49,73 @@
     right: 0;
 }
 
-.about-us-row h2{
+.about-us-row h2 {
     font-size: 20px;
     margin: 40px 0 20px 0;
     text-align: center;
 }
 
-.about-us-row2 .about-us-row-img1{
+.about-us-row2 .about-us-row-img1 {
     bottom: unset;
     top: 0;
 }
 
-.about-us-row2 .about-us-row-img2{
+.about-us-row2 .about-us-row-img2 {
     top: unset;
     bottom: 0;
 }
 
-.about-us-row3{
+.about-us-row3 {
     margin-bottom: 20px;
 }
 
-.appear-on-mobile{
+.appear-on-mobile {
     display: none;
 }
 
-.about-us-text{
+.about-us-text {
     max-width: 580px;
 }
 
-.about-us-row1, .about-us-row2, .about-us-row3{
+.about-us-row1,
+.about-us-row2,
+.about-us-row3 {
     transform: translateY(40px);
     opacity: 0;
 }
 
-@media only screen and (min-width: 1024px)
-{
+@media only screen and (min-width: 1024px) {
 
-    .about-hero-container{
+    .about-hero-container,
+    .hero .main_container {
         height: 300px !important;
     }
-    .about-us-row{
+
+    .about-us-row {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 40px;
     }
 
-    .hide-on-desktop{
+    .hide-on-desktop {
         display: none;
     }
 
-    .appear-on-mobile{
+    .appear-on-mobile {
         display: block;
         text-align: start !important;
     }
 
-    .about-us-row-imgs{
+    .about-us-row-imgs {
         margin: 0;
         height: 530px;
         min-width: 525px;
         max-width: 525px;
     }
 
-    .about-us-row1, .about-us-row3{
+    .about-us-row1,
+    .about-us-row3 {
         flex-direction: row-reverse;
     }
-
-    /* .about-us-row1{
-        margin-top: ;
-    } */
-
-    /* .about-us-row-img1{
-        height: 300px;
-        width: auto;
-    } */
 }

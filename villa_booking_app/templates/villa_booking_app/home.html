@@ -16,7 +16,7 @@
         <div class="overlay menu main_container">
             <a href="javascript:void(0)" class="close_button">&#x2715;</a>
             <div class="overlay-content">
-                <a href="#">Home</a>
+                <a href="{% url 'villa_booking_app:index' %}">Home</a>
                 <a href="{% url 'villa_booking_app:about' %}">About Us</a>
                 <a href="#">Contact Us</a>
                 <button class="booking_button transparent_button horizontal_rounded_edges">Book Now</button>
@@ -65,7 +65,7 @@
                 <h2>LOGO</h2>
             </div>
             <div class="menu_tabs">
-                <a href="#">Home</a>
+                <a href="{% url 'villa_booking_app:index' %}">Home</a>
                 <a href="{% url 'villa_booking_app:about' %}">About Us</a>
                 <a href="#">Contact Us</a>
                 <button class="booking_button transparent_button horizontal_rounded_edges">Book Now</button>
@@ -108,7 +108,8 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa pariatur optio totam omnis minima,
                     repellendus id fuga fugit temporibus tenetur, expedita nihil eveniet est ipsum dignissimos officiis
                     accusantium ratione. Maiores.</p>
-                <button class="solid_button horizontal_rounded_edges"><a href="{% url 'villa_booking_app:index' %}">Read More</a></button>
+                <button class="solid_button horizontal_rounded_edges"><a href="{% url 'villa_booking_app:about' %}">Read
+                        More</a></button>
             </div>
             <img src="{% static 'image/villa-pic-1.jpg' %}" alt="villa image" class="villa-image-1">
             <img src="{% static 'image/villa-pic-4.jpg' %}" alt="villa image" class="villa-image-2">
@@ -257,8 +258,8 @@
             </div>
             <div class="links">
                 <h3>Links</h3>
-                <p><a href="">Home</a></p>
-                <p><a href="{% url 'villa_booking_app:index' %}">About Us</a></p>
+                <p><a href="{% url 'villa_booking_app:index' %}">Home</a></p>
+                <p><a href="{% url 'villa_booking_app:about' %}">About Us</a></p>
                 <p><a href="">Contact Us</a></p>
             </div>
             <div class="socials">
