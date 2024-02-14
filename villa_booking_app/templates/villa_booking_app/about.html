@@ -8,7 +8,6 @@
     <title>About Us</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'styles/home.css' %}" />
-    <link rel="stylesheet" href="{% static 'styles/about.css' %}" />
 </head>
 
 <body>
@@ -19,7 +18,7 @@
             <div class="overlay-content">
                 <a href="{% url 'villa_booking_app:index' %}">Home</a>
                 <a href="{% url 'villa_booking_app:about' %}">About Us</a>
-                <a href="#">Contact Us</a>
+                <a href="{% url 'villa_booking_app:contact' %}">Contact Us</a>
                 <button class="booking_button transparent_button horizontal_rounded_edges">Book Now</button>
             </div>
         </div>
@@ -68,7 +67,7 @@
             <div class="menu_tabs">
                 <a href="{% url 'villa_booking_app:index' %}">Home</a>
                 <a href="{% url 'villa_booking_app:about' %}">About Us</a>
-                <a href="#">Contact Us</a>
+                <a href="{% url 'villa_booking_app:contact' %}">Contact Us</a>
                 <button class="booking_button transparent_button horizontal_rounded_edges">Book Now</button>
             </div>
             <div id="menu_button">
@@ -254,7 +253,7 @@
                 <h3>Links</h3>
                 <p><a href="{% url 'villa_booking_app:index' %}">Home</a></p>
                 <p><a href="{% url 'villa_booking_app:about' %}">About Us</a></p>
-                <p><a href="">Contact Us</a></p>
+                <p><a href="{% url 'villa_booking_app:contact' %}">Contact Us</a></p>
             </div>
             <div class="socials">
                 <h3>Socials</h3>

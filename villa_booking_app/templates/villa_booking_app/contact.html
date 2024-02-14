@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <!-- pop up menu list -->
+    <div id="menu_modal" class="dimmer">
+        <div class="overlay menu main_container">
+            <a href="javascript:void(0)" class="close_button">&#x2715;</a>
+            <div class="overlay-content">
+                <a href="{% url 'villa_booking_app:index' %}">Home</a>
+                <a href="{% url 'villa_booking_app:about' %}">About Us</a>
+                <a href="{% url 'villa_booking_app:contact' %}">Contact Us</a>
+                <button class="booking_button transparent_button horizontal_rounded_edges">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- book now pop up -->
+    <div id="booking_modal" class="dimmer">
+        <div class="overlay menu main_container">
+            <a href="javascript:void(0)" class="close_button">&#x2715;</a>
+            <div class="overlay-content">
+                <p>Please choose the duration of your stay at one of our villas</p>
+                <form method="post" action="{% url 'villa_booking_app:book_villa' 1 %}">
+                    {% csrf_token %}
+                    <div id="startdate_container">
+                        <label for="start">Duration Start</label>
+                        <input id="start" type="date" class="horizontal_rounded_edges transparent_button"
+                            name="check_in_date">
+                    </div>
+                    <div id="enddate_container">
+                        <label for="end">Duration End</label>
+                        <input id="end" type="date" class="horizontal_rounded_edges transparent_button"
+                            name="check_out_date">
+                    </div>
+                    <div id="villatype_container">
+                        <label for="villa_type">Villa Type</label>
+                        <select name="villa_type" id="villa_type" class="transparent_button">
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                    </div>
+                    <button id="book_button" class="solid_button" type="submit">Book</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="main_container">
+            <div class="logo_container">
+                <div class="logo">
+                    <img src="{% static 'image/villa_image_1.avif' %}" alt="logo_pic">
+                </div>
+                <h2>LOGO</h2>
+            </div>
+            <div class="menu_tabs">
+                <a href="{% url 'villa_booking_app:index' %}">Home</a>
+                <a href="{% url 'villa_booking_app:about' %}">About Us</a>
+                <a href="{% url 'villa_booking_app:contact' %}">Contact Us</a>
+                <button class="booking_button transparent_button horizontal_rounded_edges">Book Now</button>
+            </div>
+            <div id="menu_button">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container tint hero contact-hero-container">
+        <div class="main_container">
+            <div class="context">
+                <p>Contact Us</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-us-container">
+        <div class="main_container">
+            <form class="contact-form">
+                <div class="contact-input-group">
+                    <input type="text" id="email" name="email" required>
+                    <label class="contact-labels" for="email">Email</label>
+                </div>
+                <div class="contact-input-group">
+                    <input type="text" id="name" name="name" required>
+                    <label class="contact-labels" for="name">Name</label>
+                </div>
+                <div class="contact-input-group">
+                    <textarea type="text" id="message" name="message" rows="8" required></textarea>
+                    <label class="contact-labels" for="message">Message</label>
+                </div>
+                <div>
+                    <div class="contact-input-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label class="contact-labels" for="subject">Subject</label>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LeZ33IpAAAAACK5mHtldKvsB9VhiglVIjB-a2sF"></div>
+                    <button class="horizontal_rounded_edges solid_button" type="submit">Get In Touch!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="main_container">
+            <div class="logo_container">
+                <div class="logo">
+                    <img src="{% static 'image/villa_image_1.avif' %}" alt="logo_pic">
+                </div>
+                <h2>LOGO</h2>
+            </div>
+            <div class="contact_info">
+                <h3>Contact Info</h3>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7" />
+                    </svg>
+                    <span>some address</span>
+                </p>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z" />
+                    </svg>
+                    <span>+601234567890</span>
+                </p>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+                    </svg>
+                    <span>someemail@gmail.com</span>
+                </p>
+            </div>
+            <div class="links">
+                <h3>Links</h3>
+                <p><a href="{% url 'villa_booking_app:index' %}">Home</a></p>
+                <p><a href="{% url 'villa_booking_app:about' %}">About Us</a></p>
+                <p><a href="{% url 'villa_booking_app:contact' %}">Contact Us</a></p>
+            </div>
+            <div class="socials">
+                <h3>Socials</h3>
+                <a href="https://x.com/"><img src="{% static 'image/x.png' %}" alt="X"></a>
+                <a href="https://instagram.com/"><img src="{% static 'image/ig.png' %}" alt="Instagram"></a>
+                <a href="https://facebook.com/"><img src="{% static 'image/fb.png' %}" alt="Facebook"></a>
+            </div>
+
+        </div>
+        <div class="credit">
+            <p>© logo All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'scripts/home.js' %}"></script>
+</body>
+
+</html>

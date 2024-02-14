@@ -1,5 +1,5 @@
 .about-hero-container,
-.hero .main_container {
+.about-hero-container .main_container {
     height: 200px !important;
 }
 
@@ -31,7 +31,6 @@
 }
 
 .about-us-row-img1 {
-    /* height: 175px; */
     width: 60%;
     height: auto;
     border-radius: 5px;
@@ -87,7 +86,7 @@
 @media only screen and (min-width: 1024px) {
 
     .about-hero-container,
-    .hero .main_container {
+    .about-hero-container .main_container {
         height: 300px !important;
     }
 
